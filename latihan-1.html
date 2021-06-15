@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Latihan Sesi 1</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f6f7fc;
+        margin: 0;
+    }
+
+    ul {
+        text-align: right;
+        background-color: white;
+        margin: 0;
+        padding: 20px;
+        box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.5);
+    }
+
+    li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    li a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        object-fit: cover;
+    }
+
+    .container {
+        padding: 30px;
+    }
+
+    .col {
+        flex: 1;
+    }
+
+    .font-weight-bold {
+        font-weight: bold;
+    }
+
+    .bg-white {
+        background-color: white;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+
+    .fullwidth input, .fullwidth button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 10px;
+        border-radius: 7px;
+    }
+
+    #btn-kontak {
+        background-color: blue;
+        color: white;
+    }
+
+    #btn-resume {
+        background-color: white;
+        color: green;
+        border-color: green;
+    }
+
+    #btn-submit {
+        background-color: green;
+        color: white;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    @media (min-width: 801px) {
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+</head>
+<body>
+    <ul>
+        <li><a href="tugas-1.html">HOME</a></li>
+        <li><a href="latihan-off-sesi-1.html">PRODUCT</a></li>
+        <li><a href="latihan-off-sesi-1.html">GALLERY</a></li>
+        <li><a href="latihan-off-sesi-1.html">BLOG</a></li>
+        <li><a href="latihan-off-sesi-1.html">INVENTORY</a></li> 
+    </ul>
+    <div class="container">
+        <section class="row bg-white">
+            <div class="row col">
+                <div class="col" style="text-align: left;">
+                    <img id="avatar" src="data:image/jpeg;base64,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" alt="avatar">
+                </div>
+                <div class="col">
+                    <h1 id="pName">Nama Anda</h1>
+                    <p id="pRole">Front End Designer</p>
+                    <a href="#form" class="button bg-blue" onclick="editForm()">Edit</a>
+                    <!-- <button class="btn" id="btn-kontak" id="tombol" onclick="editForm()">Edit</button> -->
+                    <button class="btn" id="btn-resume">Resume</button>
+                </div>
+            </div>
+            <div class="col row">
+                <div class="col font-weight-bold">
+                    <p>Availability</p>
+                    <p>Usia</p>
+                    <p>Lokasi</p>
+                    <p>Pengalaman</p>
+                    <p>Email</p>
+                </div>
+                <div style="flex:3">
+                    <p id="pAvailability">Full Time</p>
+                    <p id="pUsia">19</p>
+                    <p id="pLokasi">Jakarta</p>
+                    <p id="pPengalaman">2</p>
+                    <p id="pEmail">email@gmail.com</p>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white fullwidth">
+            <form id="form" class="hidden">
+                <label>Nama</label>
+                <input id="inpName" type="nama" placeholder="masukkan nama anda">
+                <br>
+                <label>Role</label>
+                <input id="inpRole" type="text" name="">
+                <br>
+                <label>Availability</label>
+                <input id="inpAvailability" type="text">
+                <br>
+                <label>Usia</label>
+                <input id="inpUsia" type="number">
+                <br>
+                <label>Lokasi</label>
+                <input id="inpLokasi" type="text">
+                <br>
+                <label>Years Experience</label>
+                <input id="inpPengalaman" type="number">
+                <br>
+                <label>Email</label>
+                <input id="inpEmail" type="email">
+                <br>
+                <button class="btn" id="btn-submit" onclick="showHeading()" type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        // function toggleHeading() {
+        //     const elementsClass = document.getElementById('form').className
+        //     if(elementsClass.indexOf('hidden') > -1){
+        //         document.getElementById('form').className = ""
+        //     } else {
+        //         document.getElementById('form').className = "hidden"
+        //     }
+        // }
+        
+        var formMenu = document.getElementById("form");
+            formMenu.style.display="none";
+            
+            function editForm(){
+                if(formMenu.style.display === "none"){
+                    formMenu.style.display = "block";
+                }else{
+                    formMenu.style.display = "none";
+                    }
+                    var name=document.getElementById("pName").innerHTML;
+                    var role=document.getElementById("pRole").innerHTML;
+                    var availability=document.getElementById("pAvailability").innerHTML;
+                    var usia=document.getElementById("pUsia").innerHTML;
+                    var lokasi=document.getElementById("pLokasi").innerHTML;
+                    var pengalaman=document.getElementById("pPengalaman").innerHTML;
+                    var email=document.getElementById("pEmail").innerHTML;
+
+
+                document.getElementById("inpName").value = name;
+                document.getElementById("inpRole").value = role;
+                document.getElementById("inpAvailability").value = availability;
+                document.getElementById("inpUsia").value = usia;
+                document.getElementById("inpLokasi").value = lokasi;
+                document.getElementById("inpPengalaman").value = pengalaman;
+                document.getElementById("inpEmail").value = email;
+                }
+
+        function showHeading() {
+            formMenu.style.display="none";
+            var name = document.getElementById("inpName").value;
+            var role = document.getElementById("inpRole").value;
+            var availability = document.getElementById("inpAvailability").value;
+            var usia = document.getElementById("inpUsia").value;
+            var lokasi = document.getElementById("inpLokasi").value;
+            var pengalaman = document.getElementById("inpPengalaman").value;
+            var email = document.getElementById("inpEmail").value;
+
+            document.getElementById("pName").innerHTML = name;
+            document.getElementById("pRole").innerHTML = role;
+            document.getElementById("pAvailability").innerHTML = availability;
+            document.getElementById("pUsia").innerHTML = usia;
+            document.getElementById("pLokasi").innerHTML = lokasi;
+            document.getElementById("pPengalaman").innerHTML = pengalaman;
+            document.getElementById("pEmail").innerHTML = email;
+        }
+    </script>
+</body>
+</html>
